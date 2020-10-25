@@ -15,3 +15,4 @@ These are my solutions to the Golang exercises on [Exercism's Go Track](https://
     - [Space Age](side-exercises/space-age/README.md)
     - [Leap](side-exercises/leap/README.md)
     - [Triangle](side-exercises/triangle/README.md)
+    - [Proverb](side-exercises/proverb/README.md)
