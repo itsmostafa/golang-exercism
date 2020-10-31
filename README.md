@@ -11,6 +11,7 @@ These are my solutions to the Golang exercises on [Exercism's Go Track](https://
     - [Isogram](main-exercises/isogram/README.md)
     - [Difference of Squares](main-exercises/difference-of-squares/README.md)
     - [Luhn](main-exercises/luhn/README.md)
+    - [Grains](main-exercises/grains/README.md)
 
 - Side Exercises
     - [Space Age](side-exercises/space-age/README.md)
