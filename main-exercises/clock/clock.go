@@ -2,13 +2,15 @@ package clock
 
 import "fmt"
 
+// Clock struct
 type Clock struct {
 	hour   int
 	minute int
 }
 
-// Update converts hour and minute inputs to time
-func (c Clock) Update() Clock {
+// New generates the given hour and minute to time
+func New(hour, minute int) Clock {
+	c := Clock{hour: hour, minute: minute}
 	for c.minute < 0 {
 		c.minute += 60
 		c.hour--
@@ -24,22 +26,16 @@ func (c Clock) Update() Clock {
 	return c
 }
 
-// New generates a new time.
-func New(hour, minute int) Clock {
-	c := Clock{hour: hour, minute: minute}
-	return c.Update()
-}
-
 // Add the given duration.
 func (c Clock) Add(duration int) Clock {
 	c.minute += duration
-	return c.Update()
+	return New(c.hour, c.minute)
 }
 
 // Subtract the given duration.
 func (c Clock) Subtract(duration int) Clock {
 	c.minute -= duration
-	return c.Update()
+	return New(c.hour, c.minute)
 }
 
 // String converts the given time to a string.
