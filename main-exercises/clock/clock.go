@@ -10,20 +10,12 @@ type Clock struct {
 
 // New generates the given hour and minute to time
 func New(hour, minute int) Clock {
-	c := Clock{hour: hour, minute: minute}
-	for c.minute < 0 {
-		c.minute += 60
-		c.hour--
+	m := minute + hour*60
+	m %= 24 * 60
+	if m < 0 {
+		m += 24 * 60
 	}
-	for c.hour < 0 {
-		c.hour += 24
-	}
-
-	c.hour += int(c.minute / 60)
-	c.minute = c.minute % 60
-	c.hour = c.hour % 24
-
-	return c
+	return Clock{m / 60, m % 60}
 }
 
 // Add the given duration.
