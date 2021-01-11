@@ -14,6 +14,7 @@ These are my solutions to the Golang exercises on [Exercism's Go Track](https://
     - [Grains](main-exercises/grains/README.md)
     - [Clock](main-exercises/clock/README.md)
     - [Parallel Letter Frequency](main-exercises/parallel-letter-frequency/README.md)
+    - [Tree Building](main-exercises/tree-building/README.md)
 
 - Side Exercises
     - [Space Age](side-exercises/space-age/README.md)
